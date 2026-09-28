@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>💪 Workout Tracker</h1>
+            <p class="subtitle">Track your daily workouts and stay motivated</p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Add Workout Form Section -->
+            <section class="form-section">
+                <h2>Add New Workout</h2>
+                <form id="workoutForm" class="workout-form">
+                    <!-- Exercise Name Input -->
+                    <div class="form-group">
+                        <label for="exerciseName">Exercise Name *</label>
+                        <input 
+                            type="text" 
+                            id="exerciseName" 
+                            name="exerciseName" 
+                            placeholder="e.g., Running, Yoga, Weight Lifting"
+                            required
+                        >
+                    </div>
+
+                    <!-- Workout Type Input -->
+                    <div class="form-group">
+                        <label for="workoutType">Workout Type *</label>
+                        <select id="workoutType" name="workoutType" required>
+                            <option value="">Select a type</option>
+                            <option value="Cardio">Cardio</option>
+                            <option value="Strength">Strength Training</option>
+                            <option value="Flexibility">Flexibility</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Duration Input -->
+                    <div class="form-group">
+                        <label for="duration">Duration (minutes) *</label>
+                        <input 
+                            type="number" 
+                            id="duration" 
+                            name="duration" 
+                            placeholder="30"
+                            min="1"
+                            max="480"
+                            required
+                        >
+                    </div>
+
+                    <!-- Date Input -->
+                    <div class="form-group">
+                        <label for="workoutDate">Date *</label>
+                        <input 
+                            type="date" 
+                            id="workoutDate" 
+                            name="workoutDate" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary">Add Workout</button>
+                </form>
+            </section>
+
+            <!-- Workout List Section -->
+            <section class="list-section">
+                <h2>Your Workouts</h2>
+                
+                <!-- Empty State Message -->
+                <div id="emptyState" class="empty-state">
+                    <p>📭 No workouts yet. Start by adding your first workout!</p>
+                </div>
+
+                <!-- Workouts List Container -->
+                <ul id="workoutList" class="workout-list">
+                    <!-- Workouts will be added here dynamically -->
+                </ul>
+
+                <!-- Statistics Section (Optional) -->
+                <div class="stats-section" id="statsSection" style="display: none;">
+                    <div class="stat-card">
+                        <h3>Total Workouts</h3>
+                        <p id="totalWorkouts" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Minutes</h3>
+                        <p id="totalMinutes" class="stat-value">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Average Duration</h3>
+                        <p id="avgDuration" class="stat-value">0 min</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Workout Tracker | Stay Healthy, Stay Active</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
