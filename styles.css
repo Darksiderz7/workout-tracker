@@ -1,0 +1,587 @@
+/* ============================================
+   Workout Tracker - Styles
+   Modern, Clean, Responsive Design
+   Blue-Green Fitness Color Theme
+   ============================================ */
+
+/* Root Color Variables */
+:root {
+    --primary-blue: #007AFF;
+    --primary-green: #34C759;
+    --secondary-blue: #0A84FF;
+    --light-blue: #E3F2FD;
+    --light-green: #E8F5E9;
+    --dark-text: #1A1A1A;
+    --light-text: #F5F5F5;
+    --gray-border: #E0E0E0;
+    --gray-bg: #F9F9F9;
+    --success-green: #28A745;
+    --warning-orange: #FF9800;
+    --danger-red: #F44336;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   Global Styles
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark-text);
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ============================================
+   Container Layout
+   ============================================ */
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ============================================
+   Header Styles
+   ============================================ */
+
+.header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-green) 100%);
+    color: white;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow-lg);
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    font-weight: 300;
+}
+
+/* ============================================
+   Main Content
+   ============================================ */
+
+.main-content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* ============================================
+   Form Section Styles
+   ============================================ */
+
+.form-section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--dark-text);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-section h2::before {
+    content: '➕';
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   Form Group Styles
+   ============================================ */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-text);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--gray-border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background-color: var(--gray-bg);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: var(--primary-blue);
+}
+
+.form-group input[type="date"] {
+    cursor: pointer;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+    color: white;
+    box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: var(--primary-green);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #2ebd50;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background-color: var(--danger-red);
+    color: white;
+    padding: 8px 16px;
+    width: auto;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* ============================================
+   List Section Styles
+   ============================================ */
+
+.list-section {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.list-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--dark-text);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.list-section h2::before {
+    content: '📋';
+    font-size: 1.3rem;
+}
+
+/* ============================================
+   Empty State Styles
+   ============================================ */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
+    border-radius: 12px;
+    color: var(--dark-text);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+/* ============================================
+   Workout List Styles
+   ============================================ */
+
+.workout-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.workout-item {
+    background: var(--gray-bg);
+    border-left: 5px solid var(--primary-green);
+    padding: 18px 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+}
+
+.workout-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+    border-left-color: var(--primary-blue);
+}
+
+.workout-info {
+    flex: 1;
+}
+
+.workout-info h3 {
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.workout-details {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.workout-detail {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.workout-type-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: var(--light-blue);
+    color: var(--primary-blue);
+}
+
+.workout-type-badge.cardio {
+    background-color: #FFE0E0;
+    color: var(--danger-red);
+}
+
+.workout-type-badge.strength {
+    background-color: #FFF3E0;
+    color: var(--warning-orange);
+}
+
+.workout-type-badge.flexibility {
+    background-color: var(--light-green);
+    color: var(--primary-green);
+}
+
+.workout-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.workout-actions .btn {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   Statistics Section Styles
+   ============================================ */
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid var(--gray-border);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--light-blue) 0%, var(--light-green) 100%);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-card h3 {
+    font-size: 0.95rem;
+    color: var(--dark-text);
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+}
+
+/* ============================================
+   Footer Styles
+   ============================================ */
+
+.footer {
+    background: var(--dark-text);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* ============================================
+   Responsive Design - Tablet
+   ============================================ */
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 20px;
+    }
+
+    .stats-section {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .workout-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .workout-actions {
+        width: 100%;
+    }
+
+    .workout-actions .btn {
+        flex: 1;
+    }
+}
+
+/* ============================================
+   Responsive Design - Mobile
+   ============================================ */
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        min-height: auto;
+    }
+
+    .header {
+        padding: 25px 15px;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .header .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .main-content {
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .form-section,
+    .list-section {
+        padding: 15px;
+    }
+
+    .form-section h2,
+    .list-section h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+    }
+
+    .workout-details {
+        gap: 10px;
+        font-size: 0.85rem;
+    }
+
+    .workout-item {
+        padding: 15px;
+        border-left-width: 4px;
+    }
+
+    .stats-section {
+        gap: 10px;
+    }
+
+    .stat-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .stat-value {
+        font-size: 1.5rem;
+    }
+
+    .footer {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   Animation & Transitions
+   ============================================ */
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.workout-item {
+    animation: slideIn 0.3s ease;
+}
+
+/* ============================================
+   Accessibility & Utilities
+   ============================================ */
+
+:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
